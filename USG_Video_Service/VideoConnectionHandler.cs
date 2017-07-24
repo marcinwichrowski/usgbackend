@@ -116,14 +116,14 @@ namespace USG_Video_Service
 
 
             //totalSize = System.Drawing.Rectangle.Union(totalSize, System.Windows.Forms.Screen.PrimaryScreen.Bounds);
-            totalSize = System.Drawing.Rectangle.Union(totalSize, new Rectangle(new Point(0,0), new Size(930, 640))); //new Size(930,590))); // w size zmieniamy rozmiar zrzutu ekranu
+            totalSize = System.Drawing.Rectangle.Union(totalSize, new Rectangle(new Point(0,0), new Size(700, 400))); //new Size(930,590))); // w size zmieniamy rozmiar zrzutu ekranu
 
             Bitmap screenShotBMP = new Bitmap(totalSize.Width, totalSize.Height, System.Drawing.Imaging.PixelFormat.
                 Format32bppArgb);
 
             Graphics screenShotGraphics = Graphics.FromImage(screenShotBMP);
 
-            screenShotGraphics.CopyFromScreen(totalSize.X, totalSize.Y, 0, 0, totalSize.Size, CopyPixelOperation.SourceCopy);  // w 1. i 2. parametrze zmieniamy lokalizacje zrzutu
+            screenShotGraphics.CopyFromScreen(totalSize.X+300, totalSize.Y+150, 0, 0, totalSize.Size, CopyPixelOperation.SourceCopy);  // w 1. i 2. parametrze zmieniamy lokalizacje zrzutu
 
             screenShotGraphics.Dispose();
 
