@@ -123,7 +123,7 @@ namespace USG_Video_Service
 
             Graphics screenShotGraphics = Graphics.FromImage(screenShotBMP);
 
-            screenShotGraphics.CopyFromScreen(totalSize.X+300, totalSize.Y+150, 0, 0, totalSize.Size, CopyPixelOperation.SourceCopy);  // w 1. i 2. parametrze zmieniamy lokalizacje zrzutu
+            screenShotGraphics.CopyFromScreen(totalSize.X, totalSize.Y, 0, 0, totalSize.Size, CopyPixelOperation.SourceCopy);  // w 1. i 2. parametrze zmieniamy lokalizacje zrzutu
 
             screenShotGraphics.Dispose();
 
