@@ -98,7 +98,7 @@ namespace USG_Video_Service
 
                 byte[] datasize = new byte[4];
                 datasize = BitConverter.GetBytes(size);
-                if (SocketConnected(s)) sent = s.Send(datasize);
+                //if (SocketConnected(s)) sent = s.Send(datasize);
 
                 while (total < size)
                 {
@@ -116,7 +116,7 @@ namespace USG_Video_Service
 
 
             //totalSize = System.Drawing.Rectangle.Union(totalSize, System.Windows.Forms.Screen.PrimaryScreen.Bounds);
-            totalSize = System.Drawing.Rectangle.Union(totalSize, new Rectangle(new Point(0,0), new Size(700, 400))); //new Size(930,590))); // w size zmieniamy rozmiar zrzutu ekranu
+            totalSize = System.Drawing.Rectangle.Union(totalSize, new Rectangle(new Point(0,0), new Size(680, 350))); //new Size(930,590))); // w size zmieniamy rozmiar zrzutu ekranu
 
             Bitmap screenShotBMP = new Bitmap(totalSize.Width, totalSize.Height, System.Drawing.Imaging.PixelFormat.
                 Format32bppArgb);
