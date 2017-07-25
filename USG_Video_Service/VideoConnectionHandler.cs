@@ -98,7 +98,7 @@ namespace USG_Video_Service
 
                 byte[] datasize = new byte[4];
                 datasize = BitConverter.GetBytes(size);
-                //if (SocketConnected(s)) sent = s.Send(datasize);
+                if (SocketConnected(s)) sent = s.Send(datasize);
 
                 while (total < size)
                 {
